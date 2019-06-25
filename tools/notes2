@@ -1,0 +1,24 @@
+3.2. Containers & Best Practices
+32. docker-compose should be used instead of docker run command line
+33. Containers should be automatically restarted upon failure only
+34. Containers must be based on trusted images only
+35. Unnecessary packages must be removed
+36. Images should be regularly rebuilt with latest patches
+37. healthcheck feature should be implemented
+38. Secrets must not be stored in descriptors
+39. Docker volumes must be used to provide data to containers
+40. A container must serve one purpose only and only one
+41. SSH (and remote accesses) to a container must not be allowed
+42. A container must not be altered
+43. root should not be used to execute processes in containers
+44. Privileged ports should not be exposed by containers
+45. Linked containers must use private networks to communicate
+46. Host's network namespace must not be shared
+47. Exposed ports must be explicitly linked to a specific network interface (or IP)
+48. Process namespace must not be shared with host
+49. IPC namespace must not be shared
+50. Devices must not be exposed to containers
+51. Mount propagation must not be set to shared
+52. Host UTS must not be shared
+53. Memory usage of containers should be limited
+54. Container's root filesystem must be read-only

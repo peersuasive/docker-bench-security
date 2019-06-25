@@ -1,0 +1,32 @@
+Host/OS and Docker Daemon
+SELinux security policy for Docker must be enabled
+Trusted users to manage Docker images and containers must be used
+Docker resources should be hosted on a dedicated partition or disk
+Docker data volume should be encrypted
+/var/lib/docker should be audited
+/usr/bin/docker should be audited
+/etc/docker should be audited
+/etc/default/docker should be audited
+/etc/docker/daemon.json should be audited
+/usr/bin/docker-containerd should be audited
+/usr/bin/docker-runc should be audited
+docker.service should be audited
+docker.socket should be audited
+Privileged containers must be avoided
+Firewall rules must limit access to public services
+Debug logs must not be used in production
+Insecure registries must not be allowed in production
+aufs storage driver must not be used for Docker
+ulimit must be set with a default value for Docker
+Docker logs must be centralised
+Docker live-restore should be enabled
+New privileges should not be allowed for containers
+root must in container must be mapped to a non uid-0 user on host
+Access to Docker's configuration files and paths must be restricted	Error! Bookmark not defined.
+Access to Docker service must be restricted
+Access to Docker socket must be restricted
+Access to /etc/docker socket must be restricted
+Access to /etc/docker/daemon.json socket must be restricted
+Access to /etc/default/docker socket must be restricted
+Access to /etc/docker/certs.d/*/* socket must be restricted
+Access to /var/run/docker.sock must be restricted
