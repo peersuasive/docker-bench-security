@@ -279,12 +279,13 @@ check_1_14() {
 
   ## NOTE: this rule must apply on containers
 
-  privileged="$(docker ps -aq | xargs docker inspect -f '{{ Id }}:{{ .HostConfig.Privileged }}'|xargs)"
+  privileged="$(docker ps -aq | xargs docker inspect -f '{{ Id }}:{{ .HostConfig.Privileged }}')"
   if [ -z "$privileged" ]; then
     pass "$check_1_14"
     resulttestjson "PASS"
     currentScore=$((currentScore + 1))
   else
+    echo "$privileged"
     warn "$check_1_14"
     resulttestjson "WARN"
     currentScore=$((currentScore - 1))
